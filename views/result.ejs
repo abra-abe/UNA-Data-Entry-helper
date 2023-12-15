@@ -22,7 +22,9 @@
                     <td><%= org['Website Exists'] ? 'Yes' : 'No' %></td>
                     <td>
                         <% if (org['Websites'] && org['Websites'].length > 0) { %>
-                            <%= org['Websites'].join(', ') %> <!-- Display multiple websites with line breaks -->
+                            <% org['Websites'].forEach(website => { %>
+                                <a href="<%= website %>" target="_blank"><%= website %></a><br>
+                            <% }); %>
                         <% } else { %>
                             N/A
                         <% } %>
@@ -31,6 +33,6 @@
             <% }); %>
         </tbody>
     </table>
-    <a href="/download">Download Updated Document</a>
+    <!-- <a href="/download">Download Updated Document</a> -->
 </body>
 </html>
