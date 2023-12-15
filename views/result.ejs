@@ -22,7 +22,7 @@
                     <td><%= org['Website Exists'] ? 'Yes' : 'No' %></td>
                     <td>
                         <% if (org['Websites'] && org['Websites'].length > 0) { %>
-                            <%= org['Websites'].join(',') %> <!-- Display multiple websites with line breaks -->
+                            <%= org['Websites'].join(', ') %> <!-- Display multiple websites with line breaks -->
                         <% } else { %>
                             N/A
                         <% } %>
