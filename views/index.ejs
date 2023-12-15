@@ -7,8 +7,12 @@
 </head>
 <body>
     <h1>File Upload and Check</h1>
+    <p>Upload an excel sheet which has only one column titled: Organization Name,<br>
+        pay attention to the name as it is case sensitive.</br>
+        The excel sheet should have the extension of .xlsx (<b>Very Important</b>)
+    </p>
     <form action="/check-websites" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" accept=".xls, .xlsx">
+        <input type="file" name="file" accept=".xls, .xlsx"></br></br>
         <button type="submit">Check Websites</button>
     </form>
 </body>
