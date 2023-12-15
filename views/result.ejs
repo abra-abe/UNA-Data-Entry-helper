@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    <h1>Result</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Organization Name</th>
+                <th>Website Exists</th>
+                <th>Websites</th> <!-- Add this column for displaying multiple websites -->
+            </tr>
+        </thead>
+        <tbody>
+            <% organizations.forEach(org => { %>
+                <tr>
+                    <td><%= org['Organization Name'] %></td>
+                    <td><%= org['Website Exists'] ? 'Yes' : 'No' %></td>
+                    <td>
+                        <% if (org['Websites'] && org['Websites'].length > 0) { %>
+                            <%= org['Websites'].join(',') %> <!-- Display multiple websites with line breaks -->
+                        <% } else { %>
+                            N/A
+                        <% } %>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <a href="/download">Download Updated Document</a>
+</body>
+</html>
