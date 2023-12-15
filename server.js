@@ -39,6 +39,7 @@ app.post('/check-websites', upload.single('file'), async (req, res) => {
                 `${baseUrl}${orgName}.co.tz`,
                 `${baseUrl}${orgName}.ac.tz`,
                 `${baseUrl}${orgName}.or.tz`,
+                `${baseUrl}${orgName}.org`
                 // Add more alternative URL patterns as needed
             ];
         
